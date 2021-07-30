@@ -1,0 +1,21 @@
+{% extends 'learn/base.html' %}
+
+    <title>Article</title>
+{% block content %}
+  <h2>Article's Page</h2>
+{% for i in articles %}
+    <p>This article's id is: {{i.articleid}}</p>
+    <p>This article's title is: {{i.title}}</p>
+    <p>This image path is: {{i.imgpath}}</p>
+    <p>This short description is: {{i.shortdes}}</p>
+    <p>This long description is: {{i.longdes}}</p>
+    <p>This number of views are: {{i.views}}</p>
+    <p>This article's created on: {{i.createdate}}</p>
+    <p>This role id is: {{i.roleid}}</p>
+    <p>This article's type id is: {{i.articletypeid}}</p>
+    <p>This user id is: {{i.userid}}</p>
+    <p>This school id is: {{i.schoolid}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

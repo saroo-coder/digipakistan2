@@ -1,0 +1,16 @@
+{% extends 'learn/base.html' %}
+    <title>Announcements</title>
+{% block content %}
+<h1>This is announcements template</h1>
+{% for i in announcement %}
+<p>{{i.announcementid}}</p>
+<p>{{i.announcementtitle}}</p>
+<p>{{i.announcementbody}}</p>
+<p>{{i.createddate}}</p>
+<p>{{i.roleid}}</p>
+<p>{{i.userid}}</p>
+<p>{{i.schoolid}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'learn/base.html' %}
+    <title>Certificate Type</title>
+
+<h2>yeh certificate ki type ka temp he</h2>
+{% block content %}
+{% for i in advisorayboard %}
+<p>{{i.certificatetypeid}}</p>
+<p>{{i.certificatetypename}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

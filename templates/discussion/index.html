@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>Class Selection For Discussion</h2>
+    <div>
+    <form action="discussion" method="POST"> 
+    {% csrf_token %} 
+    <label >Select Class Name:</label>
+    <select name="classname">
+    {% for cls in object_list1  %}
+    <option value="{{cls.name}}">{{cls.name}}</option>
+    {% endfor %} 
+    </select> 
+    <input type="submit" value="Submit"> 
+    </form>    
+    </div>
+</body>
+</html>

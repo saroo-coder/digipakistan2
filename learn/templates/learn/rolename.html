@@ -1,0 +1,12 @@
+{% extends 'learn/base.html' %}
+    <title>Role Name</title>
+
+<h1>yeh role name ka temp he</h1>
+{% block content %}
+{% for i in advisorayboard %}
+<p>{{i.roleid}}</p>
+<p>{{i.rolename}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

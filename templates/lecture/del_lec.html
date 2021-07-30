@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Uploaded Lecture</title>
+</head>
+<body>
+    <div class="container">
+	<form action="/del_lec" method="POST">
+	{% csrf_token %}
+	<label >Enter the Lecture id: </label><input type="number" name="lectureid"> <br> <br>
+	<label >Enter the Course id: </label><input type="number" name="courseid"> <br><br>
+    <label >Enter the Lecture name: </label><input type="text" name="lecturename"> <br><br>
+	<input type="submit" value="Delete">
+	</form>
+</body>
+</html>

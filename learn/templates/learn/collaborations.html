@@ -1,0 +1,16 @@
+{% extends 'learn/base.html' %}
+    <title>Collaborations</title>
+
+<h1>yeh wala collab ka page he</h1>
+{% block content %}
+{% for i in advisorayboard %}
+<p>{{i.collaborationid}}</p>
+<p>{{i.collaborationname}}</p>
+<p>{{i.collaborationtitle}}</p>
+<p>{{i.image}}</p>
+<p>{{i.date}}</p>
+<p>{{i.description}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

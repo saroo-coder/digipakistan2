@@ -1,0 +1,10 @@
+{% extends 'learn/base.html' %}
+    <title>Business Offer Type</title>
+<h1>yeh business offer type ka temp he</h1>
+{% for i in advisorayboard %}
+<p>{{i.articletypeid}}</p>
+<p>{{i.articletypename}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

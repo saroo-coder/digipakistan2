@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Created Events and Announcements</title>
+</head>
+<body>
+    <h1>Created Events and Announcements</h1>
+    <button ><a href="portal">Back</a></button>
+    <table class= "table">
+    <thead>
+    <tr>
+    <th>Event Name</th>
+    <th>Event Detail</th>
+    <th>Due/Happening Date</th>
+    <th></th>
+    </tr>
+    </thead>
+    {% for instance in object_list%}
+    <tbody>
+    <tr>
+    <td>{{instance.event_name}} </td>
+    <td>{{instance.event_details}}</td>
+    <td>{{instance.due_date}}</td>
+    <td> <form action="del_cal" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="eventid" value="{{instance.event_id}}">
+         <input type="hidden" name="classid" value="{{instance.class_id.classid}}">
+         <input type="hidden" name="courseid" value="{{instance.course_id.courseid}}">
+        <button type="submit">Delete</button>
+        </form> </td>
+    </tr>
+    </tbody>
+    {% endfor %}        
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'learn/base.html' %}
+    <title>Web Add</title>
+{% block content %}
+<h2>This is web add template</h2>
+{% for i in webadd %}
+<p>{{i.addid}}</p>
+<p>{{i.link}}</p>
+<p>{{i.image}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

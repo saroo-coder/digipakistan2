@@ -1,0 +1,11 @@
+{% extends 'learn/base.html' %}
+    <title>{% block title %}Bank{% endblock %}</title>
+{% block content %}
+<h2>yeh wala template bank ka he</h2>
+{% for i in bank %}
+<p>{{i.bankid}}</p>
+<p>{{i.bankname}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

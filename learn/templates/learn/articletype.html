@@ -1,0 +1,12 @@
+{% extends 'learn/base.html' %}
+    <title>{%block title %}Article Type{% endblock %}</title>
+
+<h2>here is the aricle type</h2>
+{% block content %}
+{% for i in aricletype %}
+<p>{{i.articletypeid}}</p>
+<p>{{i.articletypename}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

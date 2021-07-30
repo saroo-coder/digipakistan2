@@ -1,0 +1,12 @@
+{% extends 'learn/base.html' %}
+    <title>Status</title>
+
+<h1>yeh status ka temp he</h1>
+{% block content %}
+{% for i in status %}
+<p>{{i.statusid}}</p>
+<p>{{i.statustype}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

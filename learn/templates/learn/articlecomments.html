@@ -1,0 +1,16 @@
+{% extends 'learn/base.html' %}
+<title>Article Comments</title>
+{% block content %}
+<h2>It's article comment template</h2>
+{% for i in articlescomment %}
+<p>{{i.boardid}}</p>
+<p>{{i.name}}</p>
+<p>{{i.designation}}</p>
+<p>{{i.departmentid}}</p>
+<p>{{i.shortdescription}}</p>
+<p>{{i.longdescription}}</p>
+<p>{{i.image}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Quiz</title>
+</head>
+<body>
+    <div class="container">
+	<form action="/delete_quiz" method="POST">
+	{% csrf_token %}
+	<label >Enter the quiz id: </label><input type="number" name="quizid"> <br> <br>
+	<label >Enter the course id: </label><input type="number" name="courseid"> <br><br>
+    <label >Enter the quiz name: </label><input type="text" name="quizname"> <br><br>
+	<input type="submit" value="Delete">
+	</form>
+</body>
+</html>

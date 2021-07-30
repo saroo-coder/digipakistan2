@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    
+</head>
+<body>
+<h1>Calender</h1>
+<p>Create events and announcements here!</p>
+<div>
+<form method="POST", action = "calender" , enctype="multipart/form-data">
+{% csrf_token %}
+{{form.as_p}}
+<input type="submit" value="Add Event">
+</form>
+</div>
+<div>
+<h3>To View and Delete Events:</h3>
+<form action="del_cal" method="POST">
+{% csrf_token %}
+   <label>Class Id: </label> <input type="number" name="classid" ><br>
+   <label>Course Id: </label> <input type="number" name="courseid" > <br>
+   <input type="submit" value="View">
+</form>
+</div>
+    
+</body>
+</html>

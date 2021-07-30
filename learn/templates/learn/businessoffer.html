@@ -1,0 +1,21 @@
+{% extends 'learn/base.html' %}
+    <title>{% block title %}Business Offer{% endblock %}</title>
+{% block content %}
+<h2>yeh business offer ka temp he</h2>
+{% for i in advisorayboard %}
+<p>{{i.offerid}}</p>
+<p>{{i.title}}</p>
+<p>{{i.imgpath}}</p>
+<p>{{i.shortdes}}</p>
+<p>{{i.longdes}}</p>
+<p>{{i.statusid}}</p>
+<p>{{i.views}}</p>
+<p>{{i.createdate}}</p>
+<p>{{i.roleid}}</p>
+<p>{{i.articletypeid}}</p>
+<p>{{i.userid}}</p>
+<p>{{i.schoolid}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

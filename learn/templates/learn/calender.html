@@ -1,0 +1,16 @@
+{% extends 'learn/base.html' %}
+    <title>{% block title %}Calender{% endblock %}</title>
+{% block content %}
+<h2>yeh calender ka page he</h2>
+{% for i in advisorayboard %}
+<p>{{i.boardid}}</p>
+<p>{{i.name}}</p>
+<p>{{i.designation}}</p>
+<p>{{i.departmentid}}</p>
+<p>{{i.shortdescription}}</p>
+<p>{{i.longdescription}}</p>
+<p>{{i.image}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

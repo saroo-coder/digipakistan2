@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded Assignmnet</title>
+</head>
+<body>
+    <h1>Uploaded Assignmnet</h1>
+    <p><b>ID --- Assignment Name --- Due Date --- Assignmnet File</b></p>
+    {% for instance in object_list%}
+        <p> {{instance.assignmentid}} --- {{instance.assignmentname}} --- {{instance.duedate}} --- <a href="{{instance.assignment.url}}">View File</a> </p>
+    {% endfor %}
+</body>
+</html>

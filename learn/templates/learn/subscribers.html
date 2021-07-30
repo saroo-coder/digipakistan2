@@ -1,0 +1,12 @@
+{% extends 'learn/base.html' %}
+    <title>Subscribers</title>
+<h1>yeh subscribers ka page he</h1>
+{% for i in subscribers %}
+<p>{{i.subid}}</p>
+<p>{{i.subname}}</p>
+<p>{{i.createdon}}</p>
+<p>{{i.subemail}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

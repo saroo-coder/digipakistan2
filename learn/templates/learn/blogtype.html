@@ -1,0 +1,11 @@
+{% extends 'learn/base.html' %}
+    <title>{% block title %}Blog Type{% endblock %}</title>
+{% block content %}
+<h2>yeh blogtype ka template he</h2>
+{% for i in blogtype %}
+<p>{{i.blogtypeid}}</p>
+<p>{{i.blogtypename}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

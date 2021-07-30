@@ -1,0 +1,17 @@
+{% extends 'learn/base.html' %}
+    <title>Client Message</title>
+
+<h1>yeh wala client message temp he</h1>
+{% block content %}
+{% for i in advisorayboard %}
+<p>{{i.messageid}}</p>
+<p>{{i.subject}}</p>
+<p>{{i.messagetopost}}</p>
+<p>{{i.form}}</p>
+<p>{{i.dateposted}}</p>
+<p>{{i.roleid}}</p>
+<p>{{i.userid}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

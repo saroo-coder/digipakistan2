@@ -1,0 +1,12 @@
+{% extends 'learn/base.html' %}
+    <title>Answer</title>
+{% block content %}
+<h2>This is answers template here</h2>
+{% for i in answer %}
+<p>{{i.answerid}}</p>
+<p>{{i.questionid}}</p>
+<p>{{i.answertext}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

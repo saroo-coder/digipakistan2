@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Started</title>
+	<script src = "{% static 'js/quiz.js' %}"></script>
+</head>
+<body>
+	<div class="container">
+	<form action="/view_quiz" method="POST">
+	{% csrf_token %}
+	<label >Enter the quiz id: </label><input type="number" name="quizid"> <br> <br>
+	<label >Enter the course id: </label><input type="number" name="courseid"> <br><br>
+	<input type="submit" value="Submit">
+	</form>
+	
+	</div>
+	<div id = "container">
+		<header>
+			<h1>Objective test Question</h1>
+           <strong><p>This quiz can be attempted only once. Be careful while submitting.</p></strong> 
+		</header>
+
+		<section>
+		
+			<form name = "quizForm" onsubmit = "submitAnswers(answers = [{% for q in object_list %}'{{ q.answer }}',{% endfor %}])">
+			{% csrf_token %}
+			{% for q in object_list %}
+				<h3> {{q.quizid.quizname}} . {{ q.questionid }} : {{ q.question }}</h3>
+				<input type = "radio" name = "q{{ q.questionid }}" value = "a" id = "q1a">   a. {{ q.option1 }}<br><br>
+				<input type = "radio" name = "q{{ q.questionid }}" value = "b" id = "q1b">   b. {{ q.option2 }}<br><br>       
+				<input type = "radio" name = "q{{ q.questionid }}" value = "c" id = "q1c">   c. {{ q.option3 }}<br><br>
+				<input type = "radio" name = "q{{ q.questionid }}" value = "d" id = "q1d">   d. {{ q.option4 }}<br><br>
+			{% endfor %}
+				<br><br>
+				<input type = "submit" value = "Submit Answer">
+				<div id = "results"></div>
+			</form>
+			<br><br>
+	    </section>
+		
+	</div>
+
+</body>
+</html>

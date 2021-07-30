@@ -1,0 +1,12 @@
+{% extends 'learn/base.html' %}
+    <title>Tbl Class</title>
+<h1>yeh class ka temp he</h1>
+{% block content %}
+{% for i in advisorayboard %}
+<p>{{i.classid}}</p>
+<p>{{i.name}}</p>
+<p>{{i.schoolid}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

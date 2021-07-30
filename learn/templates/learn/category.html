@@ -1,0 +1,11 @@
+{% extends 'learn/base.html' %}
+    <title>Category</title>
+{% block content %}
+<p>yeh category ka temp he</p>
+{% for i in category %}
+<p>{{i.categoryid}}</p>
+<p>{{i.categoryname}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

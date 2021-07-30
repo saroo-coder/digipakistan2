@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>Discussion Panel</h2>
+    <div>
+    <fieldset>
+    <legend>Discussion Panel</legend>
+    {%for msg in object_list %}
+    <p><span>{{msg.timestamp}}</span> <br> 
+    <span> <strong>{{msg.author}}</strong></span> <span>{{msg.content}}</span> </p>
+    {% endfor %}
+    </fieldset>  
+    </form>
+    </div>
+    <div>
+    <form action="save" method="POST">
+    {% csrf_token %}
+    <br>
+    <p>Enter your message here:</p>
+    <input type="hidden" name="classname" value="{{object_list2}}">
+    <input type="text" name="msg" > <br>
+    <input type="submit" value="Enter">
+    </form>    
+    </div>
+</body>
+</html>

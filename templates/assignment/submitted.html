@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Assignmnet</title>
+</head>
+<body>
+    <h1>Submitted Assignmnet</h1>
+    <form action="/submitted_ass" method="POST">
+    {% csrf_token %}
+   <label>Assignment Id: </label> <input type="number" name="assignmentid" >
+   <label>Assignment Name: </label> <input type="text" name="assignmentname" >
+   <input type="submit" value="Submit">
+    </form>
+
+    <p><b>ID --- Student Name --- Submission Date --- Assignmnet File</b></p>
+    {% for instance in object_list%}
+        <p> {{instance.uploadid}} --- {{instance.studentid}} --- {{instance.submitdate}} --- <a href="{{instance.assignmnet_file.url}}">View File</a> </p>
+    {% endfor %}
+</body>
+</html>

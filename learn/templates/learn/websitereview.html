@@ -1,0 +1,16 @@
+{% extends 'learn/base.html' %}
+    <title>Website Review</title>
+{% block content %}
+<h2>This is website review template</h2>
+{% for i in advisorayboard %}
+<p>{{i.reviewid}}</p>
+<p>{{i.name}}</p>
+<p>{{i.comment}}</p>
+<p>{{i.email}}</p>
+<p>{{i.contactno}}</p>
+<p>{{i.createddate}}</p>
+<p>{{i.rating}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}

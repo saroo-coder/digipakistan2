@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forget Password</title>
+</head>
+<body>
+    <div class="container" style="margin:5%; text-align: left; ">
+    <form method="POST" action="forget">
+      {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleInputEmail1">Enter Username</label>
+          <input type="text"  name ="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Enter Email</label>
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1">
+        </div>
+        <button type="submit" class="btn btn-primary">Log In</button>
+      </form>
+</div>
+</body>
+</html>

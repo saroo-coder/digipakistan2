@@ -1,0 +1,12 @@
+{% extends 'learn/base.html' %}
+    <title>Section</title>
+{% block content %}
+<h1>yeh section ka temp he</h1>
+{% for i in section %}
+<p>{{i.sectionid}}</p>
+<p>{{i.sectionname}}</p>
+<p>{{i.schoolid}}</p>
+{% endfor %}
+<hr>
+{% include 'learn/footer.html'%}
+{% endblock %}
